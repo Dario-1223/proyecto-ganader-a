@@ -16,7 +16,7 @@ class GanadoTableSeeder extends Seeder
         Ganado::create([
             
             'id_ganadero' => 1,
-            'nombre' => 'Camada',
+            'nombre' => 'pinta',
             'raza' => 'Holstein',
             'edad' => 3,
             'tipo' => 'carne',
@@ -26,7 +26,7 @@ class GanadoTableSeeder extends Seeder
         Ganado::create([
             
             'id_ganadero' => 1,
-            'nombre' => 'Macvac',
+            'nombre' => 'topa',
             'raza' => 'Holstein',
             'edad' => 5,
             'tipo' => 'carne',

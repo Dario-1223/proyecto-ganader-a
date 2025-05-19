@@ -23,7 +23,7 @@ class TratamientosTableSeeder extends Seeder
 
         Tratamiento::create([
             'id_gestor' => 2,
-            'id_historial' => 2,
+            'id_historial' => 3,
             'descripcion' => 'Desinflamar aplicando la pomada...',
             'fecha_tratamiento' => '2022-01-26'
 
@@ -31,7 +31,7 @@ class TratamientosTableSeeder extends Seeder
 
         Tratamiento::create([
             'id_gestor' => 2,
-            'id_historial' => 1,
+            'id_historial' => 2,
             'descripcion' => 'Controlar el sangrado con el uso de...',
             'fecha_tratamiento' => '2022-05-11'
 

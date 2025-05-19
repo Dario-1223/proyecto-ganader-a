@@ -59,14 +59,14 @@ class AlimentacionController extends Controller
             ]);
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('success', 'Plan de Alimentación registrado exitosamente.');
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('success', 'Plan de Alimentación registrado exitosamente.');
             }
         } catch (\Throwable $th) {
             Log::error('Error al crear Plan de Alimentación : ' . $th->getMessage());
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('error', 'Error al crear Plan de Alimentación.')->withInput();
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('error', 'Error al crear Plan de Alimentación.')->withInput();
             }
         }
@@ -100,14 +100,14 @@ class AlimentacionController extends Controller
             ]);
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('success', 'Plan de Alimentación actualizada exitosamente.');
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('success', 'Plan de Alimentación actualizada exitosamente.');
             }
         } catch (\Throwable $th) {
             Log::error('Error al actualizar el Plan de Alimentación: ' . $th->getMessage());
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('error', 'Error al actualizar el Plan de Alimentación.')->withInput();
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('error', 'Error al actualizar el Plan de Alimentación.')->withInput();
             }
         }
@@ -120,14 +120,14 @@ class AlimentacionController extends Controller
             DB::statement('CALL EliminarAlimento(?)', [$id]);
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('success', 'Plan de Alimentación eliminada exitosamente.');
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('success', 'Plan de Alimentación eliminada exitosamente.');
             }
         } catch (\Throwable $th) {
             Log::error('Error al eliminar el Plan de Alimentación: ' . $th->getMessage());
             if (Auth::user()->rol == 'ganadero') {
                 return redirect()->route('Ganadero.alimentacion.index')->with('error', 'Error al eliminar el Plan de Alimentación.')->withInput();
-            } elseif (in_array(Auth::user()->rol, ['Gestor', 'administrador'])) {
+            } elseif (in_array(Auth::user()->rol, ['gestor', 'administrador'])) {
                 return redirect()->route('Administrador.alimentacion.index')->with('error', 'Error al eliminar el Plan de Alimentación.')->withInput();
             }
         }

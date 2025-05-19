@@ -49,8 +49,8 @@
         @foreach($tratamientos as $tratamiento)
         <div class="bg-white shadow rounded-lg p-5 hover:shadow-md transition">
           <h3 class="text-lg font-bold text-gray-800">Tratamiento #{{ $tratamiento->id_tratamiento }}</h3>
-          <p class="text-sm text-gray-600 mt-1">Gestor: <span class="font-medium">{{ $tratamiento->gestor->name ?? 'Nombre no disponible' }}</span></p>
-          <p class="text-sm text-gray-600">Historial ID: <span class="font-medium">{{ $tratamiento->id_historial }}</span></p>
+          <p class="text-sm text-gray-600 mt-1">ID Gestor: <span class="font-medium">{{ $tratamiento->id_gestor }}</span></p>
+          <p class="text-sm text-gray-600 mt-1">Historial ID: <span class="font-medium">{{ $tratamiento->id_historial }}</span></p>
           <p class="text-sm text-gray-600 mt-2"><strong>Descripción:</strong> {{ $tratamiento->descripcion }}</p>
           <p class="text-xs text-gray-400 mt-2">Fecha: {{ \Carbon\Carbon::parse($tratamiento->fecha_tratamiento)->format('d/m/Y') }}</p>
           <div class="mt-5 flex justify-end space-x-2">
@@ -102,7 +102,7 @@
             Descargar
           </button>
         </div>
-        <p class="text-sm text-gray-600 mt-2"><strong>Gestor:</strong> {{ $reporte->id_gestor }}</p>
+        <p class="text-sm text-gray-600 mt-2"><strong>ID Gestor:</strong> {{ $reporte->id_gestor }}</p>
                 <p class="text-sm text-gray-600 mt-2"><strong>Ganadero:</strong> {{ $reporte->id_ganadero }}</p>
         <p class="text-sm text-gray-600 mt-1"><strong>Descripción:</strong> {{ $reporte->descripcion }}</p>
         <p class="text-xs text-gray-400 mt-2">Fecha: {{ \Carbon\Carbon::parse($reporte->fecha_reporte)->format('d/m/Y') }}</p>
