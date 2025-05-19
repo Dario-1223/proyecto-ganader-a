@@ -128,7 +128,15 @@
                 @method('DELETE')
                 <button type="submit" class="px-3 py-1 text-sm bg-red-600 text-white rounded hover:bg-red-700">Eliminar</button>
               </form>
-              <a href="#" class="px-3 py-1 text-sm bg-emerald-100 text-emerald-700 rounded hover:bg-emerald-200">Descargar</a>
+              <a href="{{ route('reporte.download', $reporte->id_reporte) }}"
+            class="text-sm text-emerald-600 hover:underline flex items-center" title="Descargar">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Descargar
+          </a>
             </div>
           </td>
         </tr>

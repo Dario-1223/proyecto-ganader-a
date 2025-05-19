@@ -82,7 +82,6 @@
     </div>
 </div>
 </section>
-
 {{-- Sección de Reportes --}}
 <section>
   <br class="my-6">
@@ -93,17 +92,18 @@
       <div class="bg-white shadow rounded-lg p-5 hover:shadow-md transition w-80 h-70 overflow-hidden">
         <div class="flex justify-between items-start">
           <h3 class="text-lg font-bold text-gray-800">Reporte #{{ $reporte->id_reporte }}</h3>
-          <button class="text-sm text-emerald-600 hover:underline flex items-center" title="Descargar">
+          <a href="{{ route('reporte.download', $reporte->id_reporte) }}"
+            class="text-sm text-emerald-600 hover:underline flex items-center" title="Descargar">
             <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Descargar
-          </button>
+          </a>
         </div>
         <p class="text-sm text-gray-600 mt-2"><strong>ID Gestor:</strong> {{ $reporte->id_gestor }}</p>
-                <p class="text-sm text-gray-600 mt-2"><strong>Ganadero:</strong> {{ $reporte->id_ganadero }}</p>
+        <p class="text-sm text-gray-600 mt-2"><strong>Ganadero:</strong> {{ $reporte->id_ganadero }}</p>
         <p class="text-sm text-gray-600 mt-1"><strong>Descripción:</strong> {{ $reporte->descripcion }}</p>
         <p class="text-xs text-gray-400 mt-2">Fecha: {{ \Carbon\Carbon::parse($reporte->fecha_reporte)->format('d/m/Y') }}</p>
         <div class="mt-5 flex justify-end space-x-2">
@@ -111,8 +111,7 @@
             class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition text-sm font-medium">
             Ver
           </a>
-          @if (in_array(Auth()->user()->rol, ['administrador', 'gestor']))
-
+          @if (in_array(Auth::user()->rol, ['administrador', 'gestor']))
           <a href="{{ route('Ganadero.tratamientosReportes.editR', $reporte->id_reporte) }}"
             class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm font-medium">
             Editar
@@ -131,7 +130,6 @@
       </div>
       @endforeach
     </div>
-  </div>
   </div>
 </section>
 </div>

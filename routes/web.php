@@ -199,6 +199,7 @@ Route::get('/dashboardAdministrador', [DashboardController::class, 'indexAdminis
 Route::get('/dashboardGestor', [DashboardController::class, 'indexGestor'])->name('Gestor.dashboard.index');
 
 
-
+Route::get('/reportes/download/{id}', [Tratamientos_ReportesController::class, 'downloadReporte'])
+    ->name('reporte.download');
 
 
