@@ -16,7 +16,7 @@ class TratamientosTableSeeder extends Seeder
         Tratamiento::create([
             'id_gestor' => 2,
             'id_historial' => 1,
-            'descripcion' => 'Frotar la piel del animal con ...',
+            'descripcion' => 'la vaca presenta una preñes estable',
             'fecha_tratamiento' => '2020-08-16'
 
         ]);
@@ -24,7 +24,7 @@ class TratamientosTableSeeder extends Seeder
         Tratamiento::create([
             'id_gestor' => 2,
             'id_historial' => 3,
-            'descripcion' => 'Desinflamar aplicando la pomada...',
+            'descripcion' => 'la vaca tuvo un parto exitoso',
             'fecha_tratamiento' => '2022-01-26'
 
         ]);
@@ -32,7 +32,7 @@ class TratamientosTableSeeder extends Seeder
         Tratamiento::create([
             'id_gestor' => 2,
             'id_historial' => 2,
-            'descripcion' => 'Controlar el sangrado con el uso de...',
+            'descripcion' => 'la vaca se encuentra en celos',
             'fecha_tratamiento' => '2022-05-11'
 
         ]);
