@@ -15,21 +15,21 @@ class AlimentacionTableSeeder extends Seeder
     {
         Alimentacion::create([
             'id_vaca' => 1,
-            'plan_alimenticio' => 'Debe comer Pasto con...',
+            'plan_alimenticio' => 'Debe comer miel con agua',
             'fecha_inicio' => '2024-09-12',
             'fecha_fin' => '2025-11-01'
         ]);
 
         Alimentacion::create([
             'id_vaca' => 2,
-            'plan_alimenticio' => 'Debe comer lechuga con...',
+            'plan_alimenticio' => 'Debe comer mogoya con sal gruesa',
             'fecha_inicio' => '2024-12-12',
             'fecha_fin' => '2025-10-10'
         ]);
 
         Alimentacion::create([
             'id_vaca' => 3,
-            'plan_alimenticio' => 'Debe tomar agua con...',
+            'plan_alimenticio' => 'Debe comer llerva triturada',
             'fecha_inicio' => '2025-11-01',
             'fecha_fin' => '2026-06-01'
         ]);

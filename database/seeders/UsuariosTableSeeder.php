@@ -16,31 +16,31 @@ class UsuariosTableSeeder extends Seeder
     {
         User::create([
             'name' => 'Iván',
-            'last_name' => 'Iván',
+            'last_name' => 'muñoz',
             'email' => 'IvanUrbano@gmail.com',
             'password' => '12345678',
-            'telefono' => '3214567878',
-            'direccion' => 'V. San Bernardino',
+            'telefono' => '3127217071',
+            'direccion' => 'Génova Nariño',
             'rol' => 'ganadero'
         ]);
 
         User::create([
-            'name' => 'Alejandro',
-            'last_name' => 'Galvis',
-            'email' => 'alejandro@gmail.com',
+            'name' => 'yeison',
+            'last_name' => 'Sanchez',
+            'email' => 'yeisonsanchez@gmail.com',
             'password' => '87654321',
-            'telefono' => '312414174',
-            'direccion' => 'V. San Bernardino',
+            'telefono' => '3052774836',
+            'direccion' => 'Tambo Cuca',
             'rol' => 'gestor'
         ]);
 
         User::create([
-            'name' => 'The',
-            'last_name' => 'Cheivz',
-            'email' => 'thecheiviz13@gmail.com',
+            'name' => 'Mateo',
+            'last_name' => 'Rivera',
+            'email' => 'MateoRivera@gmail.com',
             'password' => '14252352',
-            'telefono' => '3134152352',
-            'direccion' => 'Cafe la Palma',
+            'telefono' => '3177771774',
+            'direccion' => 'Popayán',
             'rol' => 'administrador'
         ]);
     }
