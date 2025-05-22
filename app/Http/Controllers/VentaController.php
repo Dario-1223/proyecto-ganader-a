@@ -111,9 +111,9 @@ class VentaController extends Controller
        try {
             // Proceso almacenado para insertar ganado
             DB::statement('CALL InsertarVentasGanado(?, ?, ?, ?, ?)', [
+                $request->id_vaca,
                 $request->id_vendedor,
                 $request->id_comprador,
-                $request->id_vaca,
                 $request->precio,
                 $request->fecha_venta,
             ]);

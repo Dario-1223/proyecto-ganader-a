@@ -61,7 +61,7 @@
                         <tr class="border-t hover:bg-gray-50">
                             <td class="py-2 px-4">#{{ $publicacion->id_publicacion }}</td>
                             <td class="py-2 px-4">{{ $publicacion->ganadero->name }}</td>
-                            <td class="py-2 px-4">{{ \Illuminate\Support\Str::limit($publicacion->descripcion, 30) }}</td>
+                            <td class="py-2 px-4">{{ \Illuminate\Support\Str::limit($publicacion->descripcion, 20) }}</td>
                             <td class="py-2 px-4">{{ $publicacion->tipo_producto }}</td>
                             <td class="py-2 px-4">{{ $publicacion->cantidad }}</td>
                             <td class="py-2 px-4">${{ number_format($publicacion->precio, 2) }}</td>
