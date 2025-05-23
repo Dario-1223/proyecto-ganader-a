@@ -129,7 +129,7 @@
                             </td>
                             <td class="py-2 px-4 space-x-2 text-center">
                                 <a href="{{ route('Ganadero.publicaciones.showG', $publicacionG->id_publicacion) }}" class="text-sm bg-gray-600 text-white px-2 py-1 rounded hover:bg-gray-700">Ver</a>
-                                @if (in_array(Auth()->user()->rol, ['administrador', 'ganadero']))
+                               @if (in_array(Auth()->user()->rol, ['administrador', 'ganadero']))
                                 <a href="{{ route('Ganadero.publicaciones.editG', $publicacionG->id_publicacion) }}" class="text-sm bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">Editar</a>
                                 <form action="{{ route('Ganadero.publicaciones.destroyG', $publicacionG->id_publicacion) }}" method="POST" class="inline-block" onsubmit="return confirm('¿Eliminar esta publicación?');">
                                     @csrf @method('DELETE')

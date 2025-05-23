@@ -163,8 +163,8 @@ class VentaController extends Controller
                 $request->id_vendedor,
                 $request->id_comprador,
                 $request->producto,
-                $request->precio,
                 $request->cantidad,
+                $request->precio,
                 $request->fecha_venta,
             ]);
             if (Auth::user()->rol == 'ganadero') {

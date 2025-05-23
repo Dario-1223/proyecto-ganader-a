@@ -63,11 +63,7 @@
           <td class="py-2 px-4">{{ $usuario->rol }}</td>
           <td class="py-2 px-4 space-x-2 flex flex-wrap">
             <a href="{{ route('Administrador.usuario.edit', $usuario->id_usuario) }}" class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">Editar</a>
-            <form action="{{ route('Administrador.usuario.destroy', $usuario->id_usuario) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
-              @csrf
-              @method('DELETE')
-              <button type="submit" class="px-3 py-1 text-sm bg-red-600 text-white rounded hover:bg-red-700">Eliminar</button>
-            </form>
+            
           </td>
         </tr>
         @endforeach

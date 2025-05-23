@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="flex justify-center">
+            <div class="flex justify-center flex-col items-center">
                 <!-- Your Logo Here -->
                 <div class="flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600">
@@ -108,4 +108,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </x-guest-layout>

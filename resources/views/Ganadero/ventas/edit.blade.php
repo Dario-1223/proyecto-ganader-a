@@ -49,7 +49,7 @@
         </div>
 
         <div>
-            <label for="precio" class="block text-sm font-medium text-gray-700">Cantidad</label>
+            <label for="precio" class="block text-sm font-medium text-gray-700">Precio</label>
             <input type="number" name="precio" id="precio" value="{{ old('precio', $venta->precio) }}" required
                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm">
         </div>

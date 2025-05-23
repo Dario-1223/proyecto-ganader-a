@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="max-w-3xl mx-auto space-y-6">
-    <h1 class="text-3xl font-bold tracking-tight text-emerald-700">Editar Historial Medico</h1>
+    <h1 class="text-3xl font-bold tracking-tight text-emerald-700">Editar Produccion</h1>
 
     <form action="{{ route('Ganadero.produccion.update', $produccion->id_produccion) }}" method="POST" class="space-y-6 bg-white border p-6 rounded-2xl shadow-sm">
         @csrf
